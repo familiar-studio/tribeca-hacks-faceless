@@ -8,18 +8,33 @@ angular.module('tribecaApp')
     var itemRef = new Firebase("https://flickering-fire-258.firebaseio.com/FaceGlasses");
 
 
+    var words = ['Baller','Busted', 'Classy', 'Fatty', 'Fierce', 'Fratty', 'Grimy', 'Gutter', 'Hipster', 'Jap', 'Neurotypical', 'Trashy', 'Ratchet', 'Regs', 'Shady', 'Sketchy', 'WASP'];
+
 
     $scope.$watch('faces', function () {
   		var total = 0;
   		var remaining = 0;
   		$scope.faces.$getIndex().forEach(function (index) {
-  			var todo = $scope.faces[index];
+  			var face = $scope.faces[index];
   			// Skip invalid entries so they don't break the entire app.
   			// if (!todo || !todo.title) {
   			// 	return;
   			// }
 
         //$scope.faces.color = Colors.getRandomColor();
+        if (!$scope.faces[index].faceSVG) {
+          var rand = Math.floor((Math.random()*4)+1);
+          $scope.faces[index].faceSVG = '/faces/face'+rand+'.svg';
+        }
+
+        if (!$scope.faces[index].word) {
+          var rand2 = Math.floor((Math.random()*5)+1);
+          $scope.faces[index].word = words[rand2];
+
+        }
+
+
+
 
   			total++;
   			// if (todo.completed === false) {
@@ -28,6 +43,16 @@ angular.module('tribecaApp')
   		});
   		$scope.totalCount = total;
   	}, true);
+
+
+    $scope.addFace = function() {
+
+      $scope.faces.$add({name: 'test', date: 'today'});
+    };
+
+
+    $scope
+
 
     // Automatically syncs everywhere in realtime
 

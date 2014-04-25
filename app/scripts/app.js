@@ -6,9 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'firebase',
-    'nvd3ChartDirectives',
-    'd3'
+    'ngAnimate',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -31,5 +30,3 @@ angular
         auto: false
       };
   });
-
-  

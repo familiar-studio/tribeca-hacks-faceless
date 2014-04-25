@@ -3,43 +3,194 @@
 
 @font-family-sans-serif: "brandon-grotesque";
 
-@body-bg: #eee;
+@body-bg: #e6e6e6;
+
+@navbar-height:40px;
 
 .navbar {
 
-  background-color:#ddd;
-}
-.navbar-header {
+  background-color:#999999;
+  color:white;
 
-  width:100%;
-  text-align:center;
+  border:0px;
 }
-.navbar-brand {
-    margin-top:0px;
-    padding-top:20px;
-    text-transform: uppercase;
-    font-weight:bold;
+// .navbar-header {
+//
+//   width:100%;
+//   text-align:center;
+// }
+// .navbar-brand {
+//     margin-top:0px;
+//     padding-top:20px;
+//     text-transform: uppercase;
+//     font-weight:bold;
+//
+//     text-align:center;
+//
+//   }
 
-    text-align:center;
+
+.navbar-inverse {
+
+  .navbar-toggle{
+
+    border:0px;
+  }
+  .navbar-brand {
+
+
+  color:#fff;
+  letter-spacing:2px;
+  font-weight:700;
+  width:120px;
+
+  left: 50%; margin-left: -60px;
+  position:absolute;
 
   }
+}
 
+.navbar-brand:hover {
+
+color:#fff;
+}
+.navbar-toggle  {
+  float:left;
+}
 
 
 .circle {
 
-  border-radius:60px;
+  // border-radius:60px;
+  //
+  // padding:10px;
+  // background-color:white;
+  //
+  // margin-bottom:20px;
+  //
+  // width:50px;
+  // position:fixed;
+  //float:left;
 
-  padding:10px;
-  background-color:white;
+  background-color:#e6e6e6;
 
-  margin-bottom:20px;
+    width:50px;
+    position:fixed;
+    top:150px;
+    left:150px;
+    //border: 1px solid #73a6cc;
+    border-radius:60px;
 
+
+
+  h5 {
+
+    color:#cc7373;
+    font-size:10px;
+    text-align:center;
+    margin:0px;
+  }
+
+  // -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  // -moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  // -o-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  // animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
 }
 
 .odometer {
-  position:fixed !important;
-  bottom:20px;
-  left:20px;
-  z-index:999999999999;
+
+  float:right;
+  color:white;
+  margin-right:10px;
 }
+
+
+
+.circle.ng-enter,
+.circle.ng-leave,
+.circle.ng-move {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position:fixed;
+}
+//
+// .circle.ng-enter {
+//   left:-10px;
+//   opacity:0;
+// }
+// .circle.ng-enter.ng-enter-active {
+//   left:0;
+//   opacity:1;
+// }
+//
+// .circle.ng-leave {
+//   left:0;
+//   opacity:1;
+// }
+// .circle.ng-leave.ng-leave-active {
+//   left:-10px;
+//   opacity:0;
+// }
+//
+// .circle.ng-move {
+//   opacity:0.5;
+// }
+// .circle.ng-move.ng-move-active {
+//   opacity:1;
+// }
+
+// .circle.ng-enter-stagger {
+//   /* 200ms will be applied between each sucessive enter operation */
+//   -webkit-transition-delay:0.2s;
+//   transition-delay:0.2s;
+//
+//   /* this is here to avoid accidental CSS inheritance */
+//   -webkit-transition-duration:0;
+//   transition-duration:0;
+// }
+
+
+
+// .circle {
+//
+//   animation: moveX 3.05s linear 0s infinite alternate,
+//   moveY 3.4s linear 0s infinite alternate;
+//
+//   -webkit-animation: moveX 3.05s linear 0s infinite alternate,
+//   moveY 3.4s linear 0s infinite alternate;
+// }
+
+
+
+@-webkit-keyframes moveX {
+  from { left: 0; } to { left: 280px; }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: 280px; }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: 280px; }
+}
+@keyframes moveX {
+  from { left: 0; } to { left: 280px; }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: 280px; }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: 280px; }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: 280px; }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: 280px; }
+}
+
+
+// .odometer {
+//   position:fixed !important;
+//   bottom:20px;
+//   left:20px;
+//   z-index:999999999999;
+// }
