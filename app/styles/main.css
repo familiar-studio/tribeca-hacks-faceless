@@ -5789,6 +5789,25 @@ button.close {
   margin-left: -60px;
   position: absolute;
 }
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #999999;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-inverse .navbar-nav li.active a {
+  background-color: transparent;
+}
+.navbar-inverse .navbar-nav li a {
+  color: white;
+}
+.navbar-inverse .navbar-nav li:hover {
+  background-color: black;
+}
 .navbar-brand:hover {
   color: #fff;
 }
@@ -5797,22 +5816,29 @@ button.close {
 }
 .circle {
   background-color: #e6e6e6;
-  width: 50px;
+  width: 80px;
   position: fixed;
   top: 150px;
   left: 150px;
   border-radius: 60px;
+  padding: 3px;
 }
 .circle h5 {
   color: #cc7373;
-  font-size: 10px;
+  font-size: 13px;
   text-align: center;
-  margin: 0px;
+  margin: 4px;
 }
 .odometer {
   float: right;
   color: white;
   margin-right: 10px;
+}
+.screenshot {
+  width: 320px;
+  margin: auto;
+  margin-left: -20px;
+  margin-top: -50px;
 }
 .circle.ng-enter,
 .circle.ng-leave,

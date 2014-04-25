@@ -23,6 +23,18 @@ angular
         templateUrl: 'views/paper.html',
         controller: 'PaperCtrl'
       })
+      .when('/demographics', {
+        templateUrl: 'views/demographics.html',
+        controller: 'DemographicsCtrl'
+      })
+      .when('/analytics', {
+        templateUrl: 'views/analytics.html',
+        controller: 'AnalyticsCtrl'
+      })
+      .when('/signin', {
+        templateUrl: 'views/signin.html',
+        controller: 'SigninCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

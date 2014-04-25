@@ -30,7 +30,6 @@ angular.module('tribecaApp')
         if (!$scope.faces[index].word) {
           var rand2 = Math.floor((Math.random()*5)+1);
           $scope.faces[index].word = words[rand2];
-
         }
 
 
@@ -48,6 +47,11 @@ angular.module('tribecaApp')
     $scope.addFace = function() {
 
       $scope.faces.$add({name: 'test', date: 'today'});
+    };
+
+    $scope.removeFace = function(id) {
+
+      $scope.faces.$remove(id);
     };
 
 
@@ -102,21 +106,21 @@ angular.module('tribecaApp')
 
     $scope.playSound = function () {
 
-      var sounds = ['http://www.freesfx.co.uk/rx2/mp3s/9/10884_1385980628.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/9/10780_1381246351.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/9/10886_1385980636.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/7/8303_1352726862.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/7/8302_1352726861.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/7/8290_1352726667.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/5/6306_1341227281.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/9/10629_1377615621.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/9/10610_1376669791.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/9/10906_1386516492.mp3',
-        'http://www.freesfx.co.uk/rx2/mp3s/9/10072_1361281386.mp3'
-        ]
+      // var sounds = ['http://www.freesfx.co.uk/rx2/mp3s/9/10884_1385980628.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/9/10780_1381246351.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/9/10886_1385980636.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/7/8303_1352726862.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/7/8302_1352726861.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/7/8290_1352726667.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/5/6306_1341227281.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/9/10629_1377615621.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/9/10610_1376669791.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/9/10906_1386516492.mp3',
+      //   'http://www.freesfx.co.uk/rx2/mp3s/9/10072_1361281386.mp3'
+      //   ]
 
-      var rand = Math.floor((Math.random()*10)+1);
-      var snd = new Audio(sounds[rand]); // buffers automatically when created
+      var rand = Math.floor((Math.random()*5)+1);
+      var snd = new Audio('/sounds/'+rand+'.wav'); // buffers automatically when created
       snd.play();
 
     }
