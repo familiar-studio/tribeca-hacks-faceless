@@ -1,0 +1,23 @@
+<p>This is the d3 view.</p>
+
+
+<div ng-controller="D3Ctrl">
+
+
+
+    {{data}}
+
+    {{result}}
+
+
+    <nvd3-stacked-area-chart
+    data="exampleData"
+    width="600"
+    height="350"
+    showXAxis="true"
+    showYAxis="true"
+    xAxisTickFormat="xAxisTickFormat()">
+  </nvd3-stacked-area-chart>
+
+
+</div>
