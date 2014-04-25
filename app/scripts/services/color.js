@@ -9,7 +9,7 @@ angular.module('tribecaApp')
 
     // Public API here
     return {
-      getRandomColor: function () {
+      getRandomColors: function () {
         var rand = Math.floor((Math.random()*4)+1);
         return colors[rand];
       }

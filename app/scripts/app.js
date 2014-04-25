@@ -27,4 +27,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+      return window.odometerOptions = {
+        auto: false
+      };
   });
+
+  

@@ -6,7 +6,7 @@ angular.module('tribecaApp')
 
 
     var itemRef = new Firebase("https://flickering-fire-258.firebaseio.com/FaceGlasses");
-    return $firebase(itemRef);
+
 
 
     $scope.$watch('faces', function () {
@@ -18,6 +18,8 @@ angular.module('tribecaApp')
   			// if (!todo || !todo.title) {
   			// 	return;
   			// }
+
+        //$scope.faces.color = Colors.getRandomColor();
 
   			total++;
   			// if (todo.completed === false) {
@@ -62,23 +64,16 @@ angular.module('tribecaApp')
     //
     // });
 
-    var colors = ['#73A7CC','#286B99', '#A9FFF4', '#FF8169', '#CC7473'];
+    $scope.colors = ['#73A7CC','#286B99', '#A9FFF4', '#FF8169', '#CC7473'];
 
 
-    $scope.randomColor = function () {
 
-    //  var rand = Math.floor((Math.random()*10)+1);
-      return Colors.getRandomColor();
+
+    $scope.randomNumber = function() {
+      return Math.floor((Math.random()*4)+1);
     }
 
-    $scope.random = function() {
-        return 0.5 - Math.random();
-    }
 
-    // $scope.people.$on("change", function() {
-    //   //console.log("A remote change was applied locally!");
-    //   $scope.playSound();
-    // });
 
     $scope.playSound = function () {
 
@@ -129,6 +124,11 @@ angular.module('tribecaApp')
 
 
     $scope.faces = $firebase(itemRef);
+
+    $scope.faces.$on("change", function() {
+      //console.log("A remote change was applied locally!");
+      $scope.playSound();
+    });
 
 
   });
