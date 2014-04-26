@@ -4,11 +4,15 @@ angular.module('tribecaApp')
   .controller('MainCtrl', function ($scope, $firebase, ItemsService, Colors) {
 
 
+    $scope.faces = [{}];
+
 
     var itemRef = new Firebase("https://flickering-fire-258.firebaseio.com/FaceGlasses");
 
 
-    var words = ['Baller','Busted', 'Classy', 'Fatty', 'Fierce', 'Fratty', 'Grimy', 'Gutter', 'Hipster', 'Jap', 'Neurotypical', 'Trashy', 'Ratchet', 'Regs', 'Shady', 'Sketchy', 'WASP'];
+    var words = ['Baller','Busted', 'Classy', 'Fatty', 'Fierce', 'Fratty', 'Grimey', 'Gutter', 'Hipster', 'Jap', 'Neurotypical', 'Trashy', 'Ratchet', 'Regs', 'Shady', 'Sketchy', 'WASP'];
+
+
 
 
     $scope.$watch('faces', function () {
@@ -23,12 +27,12 @@ angular.module('tribecaApp')
 
         //$scope.faces.color = Colors.getRandomColor();
         if (!$scope.faces[index].faceSVG) {
-          var rand = Math.floor((Math.random()*4)+1);
+          var rand = Math.floor((Math.random()*5)+1);
           $scope.faces[index].faceSVG = '/faces/face'+rand+'.svg';
         }
 
         if (!$scope.faces[index].word) {
-          var rand2 = Math.floor((Math.random()*5)+1);
+          var rand2 = Math.floor((Math.random()*16)+1);
           $scope.faces[index].word = words[rand2];
         }
 
@@ -50,6 +54,10 @@ angular.module('tribecaApp')
     };
 
     $scope.removeFace = function(id) {
+      console.log('removed this',id);
+
+      var deleteSound = new Audio('/sounds/delete.wav'); // buffers automatically when created
+      deleteSound.play();
 
       $scope.faces.$remove(id);
     };

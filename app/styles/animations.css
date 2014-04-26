@@ -8,8 +8,8 @@
 
   50% {
     opacity: 1;
-    -webkit-transform: scale(2.05);
-    transform: scale(2.05);
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
     border-width:2px;
   }
 
@@ -39,9 +39,9 @@
 
   50% {
     opacity: 1;
-    -webkit-transform: scale(2.05);
-    -ms-transform: scale(2.05);
-    transform: scale(2.05);
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5);
     border-width:2px;
   }
 

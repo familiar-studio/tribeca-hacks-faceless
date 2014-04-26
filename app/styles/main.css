@@ -5835,10 +5835,10 @@ button.close {
   margin-right: 10px;
 }
 .screenshot {
+  position: absolute;
+  left: 50%;
   width: 320px;
-  margin: auto;
-  margin-left: -20px;
-  margin-top: -50px;
+  margin-left: -160px;
 }
 .circle.ng-enter,
 .circle.ng-leave,

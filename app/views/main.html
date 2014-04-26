@@ -1,9 +1,9 @@
 <div ng-include="'/views/partials/menu.html'"></div>
 
 <div class="container">
-    <div ng-repeat="f in faces"  class="circle animated">
-        <div ng-click="removeFace(f.$id)">
-          <div ng-include="f.faceSVG"  ></div>
+    <div ng-repeat="(id, f) in faces"  class="circle animated">
+        <div >
+          <div ng-include="f.faceSVG" ng-click="removeFace(id)"  ></div>
           <h5>{{ f.word}}</h5>
         </div>
       </div>

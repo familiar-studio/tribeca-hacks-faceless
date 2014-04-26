@@ -68,7 +68,7 @@ angular.module('tribecaApp')
       function animateDiv(){
         var newq = makeNewPosition();
 
-        jQuery(element).animate({ top: newq[0], left: newq[1] }, 1000, function(){
+        jQuery(element).animate({ top: newq[0], left: newq[1] }, 1500, function(){
           animateDiv();
         });
       };
@@ -78,12 +78,9 @@ angular.module('tribecaApp')
 
     leave : function(element, done) {
       jQuery(element).css({
-        position:'relative',
-        left:0,
         opacity:1
       });
       jQuery(element).animate({
-        left:-10,
         opacity:0
       }, done);
     },
